@@ -51,5 +51,3 @@ def monte_carlo(hand, table, players=2, samples=10000):
         outcome = simulate(hand, table, players)
         dist[outcome] += 1
     return list(map(lambda x: x/samples, dist))
-
-print(monte_carlo(['As','Ac'], ['Ad','2d','7s']))
