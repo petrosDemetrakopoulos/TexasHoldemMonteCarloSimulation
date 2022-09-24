@@ -18,7 +18,7 @@ def simulate(hand, table, players):
     deck = list(filter(lambda x: x not in full, deck))
 
     #deal cards to players
-    for i in range(1,players):
+    for i in range(players):
         hn = []
         hn.append(deck[0])
         deck = deck[1:]
@@ -42,7 +42,7 @@ def simulate(hand, table, players):
             return 1 #'LOSE'
         if opponent == my_hand_rank:
             return 2 #'SPLIT'
-    return 0 #'WIN'
+        return 0 #'WIN'
 
 def monte_carlo(hand, table, players=2, samples=10000):
     dist = [0,0,0]
